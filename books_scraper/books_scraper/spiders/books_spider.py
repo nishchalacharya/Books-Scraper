@@ -46,8 +46,9 @@ class BooksSpider(scrapy.Spider):
 
 
         # Availability: clean up whitespace
-        availability = response.css("p.availability::text").getall()
-        availability = " ".join(t.strip() for t in availability if t.strip())
+        availability = response.xpath(
+            "normalize-space((//p[contains(@class,'availability')])[1])"
+        ).get(default="").strip()
 
         yield {
                 "name":response.css("h1::text").get(default="").strip(),

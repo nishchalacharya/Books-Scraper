@@ -1,1 +1,10 @@
 1> after installing scrapy, scrapy startproject <project_name> here i have given <books_scraper>
+2> setup core logic inside books_scraper/spiders/books_spider - > how to extract what to extract and how to format and other thing
+3> run : scrapy crawl books -o output.json
+    here ,scrapy -tool/command
+    crawl -> tells scrapy to run a spider 
+    books -> the name of spider - written in books_spider file( class BooksSpider(scrapy.Spider):)
+    -o -> stands output - save result to file 
+    output.json -> filename to save results ,can also change format here as (output.csv) 
+
+
