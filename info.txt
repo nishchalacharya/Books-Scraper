@@ -1,0 +1,1 @@
+1> after installing scrapy, scrapy startproject <project_name> here i have given <books_scraper>
